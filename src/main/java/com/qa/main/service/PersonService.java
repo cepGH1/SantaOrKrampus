@@ -41,7 +41,7 @@ public class PersonService {
 		
 		// return all entries of the table person
 		public List<Person> getPeople() {
-			;
+			
 			return this.prepo.findAll();
 		}
 		
