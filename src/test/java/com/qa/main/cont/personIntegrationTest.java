@@ -36,6 +36,7 @@ public class personIntegrationTest {
 	@Autowired
 	private ObjectMapper mapper; // the EXACT SAME mapper that spring uses to convert objects to and from JSON
 	
+	//checks that an entry can be made on the database table person
 	@Test
 	void testCreate() throws Exception {
 		Person requestBody = new Person("Rudolph", "milk tray", true);
@@ -53,5 +54,60 @@ public class personIntegrationTest {
 
 		this.mvc.perform(request).andExpect(checkStatus).andExpect(checkBody); // performs request and checks the
 																				// response
+	}
+	
+	//makes sure entry can be retrieved from the database
+	@Test
+	void testGet() throws Exception {
+		RequestBuilder request = get("/Person/get/1");
+		Person responseBody = new Person( 1, "Frad", "lollipops", true);
+		String responseBodyAsJSON = this.mapper.writeValueAsString(responseBody);
+		
+		ResultMatcher checkStatus = status().is(200); // check the status code is 2??
+		ResultMatcher checkBody = content().json(responseBodyAsJSON); // check the body matches the example
+		
+		this.mvc.perform(request).andExpect(checkStatus).andExpect(checkBody);
+	}
+	
+	
+	@Test
+	void testGetAll() throws Exception {
+
+		RequestBuilder request = get("/Person/getThemAll");
+
+		ResultMatcher checkStatus = status().isOk();
+
+		Person person = new Person(1, "Frad", "lollipops", true);
+		List<Person> people = List.of(person);
+		String responseBody = this.mapper.writeValueAsString(people);
+		ResultMatcher checkBody = content().json(responseBody);
+
+		this.mvc.perform(request).andExpect(checkStatus).andExpect(checkBody);
+	}
+	
+	@Test
+	void testReplace() throws Exception {
+		
+		Person replacementPerson = new Person(1,"Joe", "haribo", true);
+		String replacementPersonAsJSON = this.mapper.writeValueAsString(replacementPerson);
+
+		RequestBuilder request = put("/Person/replace/1").contentType(MediaType.APPLICATION_JSON)
+				.content(replacementPersonAsJSON);	
+
+		ResultMatcher checkStatus = status().is(202);
+
+				
+		
+		ResultMatcher checkBody = content().json(replacementPersonAsJSON);
+
+		this.mvc.perform(request).andExpect(checkStatus).andExpect(checkBody);
+	}
+	
+	@Test
+	void testRemove() throws Exception{
+		RequestBuilder request = delete("/Person/remove/1");
+		ResultMatcher checkStatus = status().is(204);
+		this.mvc.perform(request).andExpect(checkStatus);
+				
 	}
 }
