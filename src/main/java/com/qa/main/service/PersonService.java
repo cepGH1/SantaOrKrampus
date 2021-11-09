@@ -62,8 +62,8 @@ public class PersonService {
 			
 			Person existing = this.getPerson(id);
 
-			existing.setSweetChoice(newPerson.getSweetChoice());
-			existing.setGoodBehaviour(newPerson.isGoodBehaviour());
+			existing.setSweet(newPerson.getSweet());
+			existing.setGood(newPerson.isGood());
 			existing.setName(newPerson.getName());
 
 			return this.prepo.save(existing);
