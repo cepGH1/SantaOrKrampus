@@ -1,5 +1,7 @@
 INSERT INTO
-	`person`
-( `good`, `name`,`sweet`,  ) 
+
+	`Person`
+( `good`, `name`,`sweet` ) 
+
 	VALUES 
 ( true, 'Frad', 'lollipops' );

@@ -27,7 +27,9 @@ import com.qa.main.domain.Person;
 @SpringBootTest // boots the entire context
 @AutoConfigureMockMvc // creates the MockMVC object for sending our test requests
 @Sql(scripts = { "classpath:person.sql","classpath:persondata.sql" }, executionPhase = ExecutionPhase.BEFORE_TEST_METHOD)
-//@ActiveProfiles("test")//runs these tests on the h2 in memory database
+
+@ActiveProfiles("test")//runs these tests on the h2 in memory database
+
 public class personIntegrationTest {
 
 	@Autowired
