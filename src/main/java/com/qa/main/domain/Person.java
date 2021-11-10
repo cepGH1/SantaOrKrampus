@@ -8,8 +8,8 @@ import javax.persistence.Id;
 @Entity
 public class Person {
 private String name;
-private String sweetChoice;
-private boolean goodBehaviour;
+private String sweet;
+private boolean good;
 
 @Id
 @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -24,15 +24,15 @@ public Person() {
 public Person(String name, String sweetChoice, boolean goodBehaviour) {
 	super();
 	this.name = name;
-	this.sweetChoice = sweetChoice;
-	this.goodBehaviour = goodBehaviour;
+	this.sweet = sweetChoice;
+	this.good = goodBehaviour;
 }
 
-public Person(Integer id, String name, String sweetChoice, boolean goodBehaviour ) {
+public Person(Integer id, String name, String sweet, boolean good ) {
 	super();
 	this.name = name;
-	this.sweetChoice = sweetChoice;
-	this.goodBehaviour = goodBehaviour;
+	this.sweet = sweet;
+	this.good = good;
 	this.id = id;
 }
 
@@ -46,20 +46,20 @@ public void setName(String name) {
 	this.name = name;
 }
 
-public String getSweetChoice() {
-	return sweetChoice;
+public String getSweet() {
+	return sweet;
 }
 
-public void setSweetChoice(String sweetChoice) {
-	this.sweetChoice = sweetChoice;
+public void setSweet(String sweetChoice) {
+	this.sweet = sweetChoice;
 }
 
-public boolean isGoodBehaviour() {
-	return goodBehaviour;
+public boolean isGood() {
+	return good;
 }
 
-public void setGoodBehaviour(boolean goodBehaviour) {
-	this.goodBehaviour = goodBehaviour;
+public void setGood(boolean goodBehaviour) {
+	this.good = goodBehaviour;
 }
 
 public Integer getId() {

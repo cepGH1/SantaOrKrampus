@@ -63,6 +63,8 @@ public class PersonController{
 			return ResponseEntity.ok(this.service.getPeople());
 		}
 		
+		
+		
 		//remove a person from the person table
 		@DeleteMapping("/remove/{myIndex}")
 		public ResponseEntity<Person> removePerson(@PathVariable Integer myIndex){
@@ -78,4 +80,15 @@ public class PersonController{
 		
 		
 }
+		@GetMapping("/getGood")
+		public ResponseEntity<List<Person>> getGoodPeople(){
+			return ResponseEntity.ok(this.service.getGoodPeople());
+		}
+		
+		@GetMapping("/getBad")
+		public ResponseEntity<List<Person>> getBadPeople(){
+			return ResponseEntity.ok(this.service.getBadPeople());
+		}
+		
+		
 }
