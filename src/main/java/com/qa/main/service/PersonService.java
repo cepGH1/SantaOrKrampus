@@ -1,6 +1,9 @@
 package com.qa.main.service;
 
+import java.util.ArrayList;
 import java.util.List;
+
+
 
 import java.util.Optional;
 
@@ -12,7 +15,7 @@ import com.qa.main.domain.Person;
 import com.qa.main.repos.PersonRepo;
 
 @Service
-public class PersonService {
+public class PersonService{
 
 	PersonRepo prepo;
 	
@@ -76,5 +79,26 @@ public class PersonService {
 			return !this.prepo.existsById(id);
 		}
 		
+		public List<Person> getGoodPeople(){
+			List<Person> people = this.prepo.findAll();
+			List<Person> goodPeople = new ArrayList<>();
+			for(Person person:people){
+				if(person.isGood()) {
+					goodPeople.add(person);
+				}
+			}
+			return goodPeople;
+		}
 		
+		public List<Person> getBadPeople(){
+			List<Person> people = this.prepo.findAll();
+			List<Person> badPeople = new ArrayList<>();
+			for(Person person:people){
+				if(!person.isGood()) {
+					badPeople.add(person);
+				}
+			}
+			return badPeople;
+		}
+	
 }
