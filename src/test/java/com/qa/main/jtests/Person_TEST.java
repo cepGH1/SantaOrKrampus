@@ -1,12 +1,17 @@
 package com.qa.main.jtests;
 
 import org.junit.jupiter.api.Test;
-
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.ActiveProfiles;
+import org.springframework.test.context.jdbc.Sql;
+import org.springframework.test.context.jdbc.Sql.ExecutionPhase;
 
 import com.qa.main.domain.Person;
 
 
-
+@SpringBootTest
+@Sql(scripts = { "classpath:person.sql","classpath:persondata.sql" }, executionPhase = ExecutionPhase.BEFORE_TEST_METHOD)
+@ActiveProfiles("test3")//runs these tests on the h2 in memory database
 public class Person_TEST {
 
 	@Test
