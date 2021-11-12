@@ -50,7 +50,7 @@ Postman head Get  localhost:8081/Person/get/id<br>
 <h5>3. getThemAll</h5>
 Retrieves all the database entries<br>
 Postman head,  Get localhost:8081/Person/getThemAll<br>
-<img src="https://user-images.githubusercontent.com/12085003/141467315-65673066-4fa8-4d09-aea3-959f945aef68.png" height="200">
+<img src="https://user-images.githubusercontent.com/12085003/141467315-65673066-4fa8-4d09-aea3-959f945aef68.png" height="400" alt="missing image">
 ![image](https://user-images.githubusercontent.com/12085003/141467315-65673066-4fa8-4d09-aea3-959f945aef68.png)<br>
 <h5>3. getThemAll</h5>
 Retrieves all the database entries<br>
