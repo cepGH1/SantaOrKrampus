@@ -7,7 +7,11 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
+
+
 import java.util.ArrayList;
+
+
 import java.util.List;
 
 import org.junit.jupiter.api.Test;
@@ -24,8 +28,10 @@ import org.springframework.test.context.jdbc.Sql.ExecutionPhase;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.qa.main.domain.Person;
+
 import com.qa.main.rest.PersonController;
 import com.qa.main.service.PersonService;
+
 
 @SpringBootTest // boots the entire context
 @AutoConfigureMockMvc // creates the MockMVC object for sending our test requests
@@ -113,6 +119,7 @@ public class personIntegrationTest {
 		this.mvc.perform(request).andExpect(checkStatus);
 				
 	}
+
 	
 	@Test
 	void testGetGood() throws Exception{
@@ -136,4 +143,6 @@ public class personIntegrationTest {
 		this.mvc.perform(request).andExpect(checkStatus).andExpect(checkBody);
 		
 	}
+
 }
+
