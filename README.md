@@ -5,6 +5,7 @@ Reason for doing this - learning to carry out a small project in Java</br>
 Project was managed agilely, using Jira, Scrum and Kanban boards</br>
 link to jira project management: 
 https://team-1632237778310.atlassian.net/jira/software/projects/DFES/boards/3/backlog </br>
+<h3>Thoughts about the Project</h3>
 
 
 
