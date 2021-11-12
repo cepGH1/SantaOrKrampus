@@ -30,7 +30,18 @@ The App then provides Lists of good and bad people, depending on the value of th
 The App uses a MySQL database called santa_or_krampus at the localhost, port 3306<br>
 The tomcat server for the MySQL production version of the app is listening on port 8081<br>
 Testing is done on port 8082 with h2 database<br>
- 
+ <h4>Commands using Postman</h4>
+<h5>1. Create </h5>
+Adds a person entry to the Person table of the santa_or_krampus database<br>
+Command in head<br>
+Post   localhost:8081/Person/create<br>
+Put the three pieces of information in the body, as raw JSON notation<br>
+{<br>
+“name”:”joe”<br>
+“sweet”:”chocolate”<br>
+“good”: true<br>
+}<br>
+
 
 
 
