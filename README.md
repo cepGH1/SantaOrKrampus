@@ -69,6 +69,27 @@ Postman head Put localhost:8081/Person/replace/id<br>
 Removes the entry with the given id from the database<br>
 Postman head, Delete localhost:8081/Person/remove/id<br>
 ![image](https://user-images.githubusercontent.com/12085003/141469709-987adf26-cc3f-4f41-9fd7-c35a7bafcf62.png)<br>
+<h4>GitHub/repository structure</h4>
+Issues from the jira sprint are on feature branches of the git repository https://github.com/cepGH1/SantaOrKrampus<br>
+The feature branches are merged to the dev branch and that is merged to the main branch.<br>
+
+Made a feature branch for integration test, then merged it to the dev branch<br>
+![image](https://user-images.githubusercontent.com/12085003/141470664-d7c33994-87d4-45c3-9c42-3cc0e14ee022.png)<br>
+Merged dev to main<br>
+![image](https://user-images.githubusercontent.com/12085003/141470893-8c9d1a71-aff5-4338-935d-be420c026903.png)<br>
+<h4>Database Structure</h4>
+santa_or_krampus database showing contents of the person table after some additions and removals<br>
+![image](https://user-images.githubusercontent.com/12085003/141471027-f20f4f3b-9ff4-4df4-b8f6-7873fe2e850f.png)<br>
+<h4>Testing</h4>
+The app was tested with a mock mvc integration test and a junit suite of tests<br>
+![image](https://user-images.githubusercontent.com/12085003/141471181-000e9d59-bda8-4829-86a2-5c7a355d809b.png)<br>
+
+
+
+
+
+
+
 
 
 
