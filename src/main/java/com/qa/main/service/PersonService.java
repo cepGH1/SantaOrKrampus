@@ -1,6 +1,9 @@
 package com.qa.main.service;
 
+import java.util.ArrayList;
 import java.util.List;
+
+
 
 import java.util.Optional;
 
@@ -12,7 +15,7 @@ import com.qa.main.domain.Person;
 import com.qa.main.repos.PersonRepo;
 
 @Service
-public class PersonService {
+public class PersonService{
 
 	PersonRepo prepo;
 	
@@ -29,7 +32,7 @@ public class PersonService {
 
 
 
-		public void setDrepo(PersonRepo prepo) {
+		public void setPrepo(PersonRepo prepo) {
 			this.prepo = prepo;
 		}
 		
@@ -41,7 +44,7 @@ public class PersonService {
 		
 		// return all entries of the table person
 		public List<Person> getPeople() {
-			;
+			
 			return this.prepo.findAll();
 		}
 		
@@ -62,8 +65,8 @@ public class PersonService {
 			
 			Person existing = this.getPerson(id);
 
-			existing.setSweetChoice(newPerson.getSweetChoice());
-			existing.setGoodBehaviour(newPerson.isGoodBehaviour());
+			existing.setSweet(newPerson.getSweet());
+			existing.setGood(newPerson.isGood());
 			existing.setName(newPerson.getName());
 
 			return this.prepo.save(existing);
@@ -76,5 +79,26 @@ public class PersonService {
 			return !this.prepo.existsById(id);
 		}
 		
+		public List<Person> getGoodPeople(){
+			List<Person> people = this.prepo.findAll();
+			List<Person> goodPeople = new ArrayList<>();
+			for(Person person:people){
+				if(person.isGood()) {
+					goodPeople.add(person);
+				}
+			}
+			return goodPeople;
+		}
 		
+		public List<Person> getBadPeople(){
+			List<Person> people = this.prepo.findAll();
+			List<Person> badPeople = new ArrayList<>();
+			for(Person person:people){
+				if(!person.isGood()) {
+					badPeople.add(person);
+				}
+			}
+			return badPeople;
+		}
+	
 }

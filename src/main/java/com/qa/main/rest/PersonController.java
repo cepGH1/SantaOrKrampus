@@ -3,6 +3,7 @@ package com.qa.main.rest;
 import java.util.List;
 
 
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -31,6 +32,10 @@ public class PersonController{
 		this.service = service;
 	}
 	
+	public PersonService getPersonService() {
+		return this.service;
+	}
+	
 	//post to person table a new person
 		@PostMapping("/create")
 		public ResponseEntity<Person> createPerson(@RequestBody Person newPerson) {
@@ -41,7 +46,7 @@ public class PersonController{
 		
 		//replace a person in the person table
 		@PutMapping("replace/{myIndex}")
-		public ResponseEntity<Person> replaceDeer(@PathVariable Integer myIndex, @RequestBody Person newPerson){
+		public ResponseEntity<Person> replacePerson(@PathVariable Integer myIndex, @RequestBody Person newPerson){
 			System.out.println("Replacing Person with id " + myIndex + " with " + newPerson);
 			
 			Person inThereNow = this.service.replacePerson(myIndex, newPerson);
@@ -63,6 +68,8 @@ public class PersonController{
 			return ResponseEntity.ok(this.service.getPeople());
 		}
 		
+		
+		
 		//remove a person from the person table
 		@DeleteMapping("/remove/{myIndex}")
 		public ResponseEntity<Person> removePerson(@PathVariable Integer myIndex){
@@ -78,4 +85,15 @@ public class PersonController{
 		
 		
 }
+		@GetMapping("/getGood")
+		public ResponseEntity<List<Person>> getGoodPeople(){
+			return ResponseEntity.ok(this.service.getGoodPeople());
+		}
+		
+		@GetMapping("/getBad")
+		public ResponseEntity<List<Person>> getBadPeople(){
+			return ResponseEntity.ok(this.service.getBadPeople());
+		}
+		
+		
 }
