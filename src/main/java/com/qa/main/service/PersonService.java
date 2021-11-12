@@ -32,7 +32,7 @@ public class PersonService{
 
 
 
-		public void setDrepo(PersonRepo prepo) {
+		public void setPrepo(PersonRepo prepo) {
 			this.prepo = prepo;
 		}
 		
