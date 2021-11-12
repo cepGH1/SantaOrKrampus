@@ -52,10 +52,7 @@ Retrieves all the database entries<br>
 Postman head,  Get localhost:8081/Person/getThemAll<br>
 <img src="https://user-images.githubusercontent.com/12085003/141467315-65673066-4fa8-4d09-aea3-959f945aef68.png" height="400" alt="missing image">
 ![image](https://user-images.githubusercontent.com/12085003/141467315-65673066-4fa8-4d09-aea3-959f945aef68.png)<br>
-<h5>3. getThemAll</h5>
-Retrieves all the database entries<br>
-Postman head,  Get localhost:8081/Person/getThemAll<br>
-![image](https://user-images.githubusercontent.com/12085003/141468403-cd11d678-5c25-46b3-9a4c-be834c915e6d.png)<br>
+
 <h5>4. getGood</h5>
 Retrieves all the people with good behaviour, from the database, for Santa<br>
 Postman head, Get localhost:8081/Person/getGood<br>
