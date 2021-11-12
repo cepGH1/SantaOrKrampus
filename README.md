@@ -24,7 +24,7 @@ The information stored is <br>
 <ol>
   <li>name : a string , the name of the person</li>
   <li>sweet: a string, their choice of sweets, candy or chocolates to receive on St Nicholas day</li>
-<li>good: either true or false, to signify if they are going to get the chocolate or a visit from the Krampus. Value good = chocolate from St Nich. Value false = Karmpus takes you away.</li>
+<li>good: either true or false, to signify if they are going to get the chocolate or a visit from the Krampus.<br> Value good = chocolate from St Nich.<br> Value false = Karmpus takes you away.</li>
   </ol>
 The App then provides Lists of good and bad people, depending on the value of the good coloumn of the database.<br>
 The App uses a MySQL database called santa_or_krampus at the localhost, port 3306<br>
