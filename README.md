@@ -20,15 +20,17 @@ The app could be improved with a front end web page, security(a login) and outpu
 Functionality of the App
 Description
 This App takes 3 pieces of information about a person and stores them in a MySQL database. The information is passed to the app using the Postman AP.<br>
-The information stored is 
-1.	name : a string , the name of the person
-2.	sweet: a string, their choice of sweets, candy or chocolates to receive on St Nicholas day
-3.	good: either true or false, to signify if they are going to get the chocolate or a visit from the Krampus. Value good = chocolate from St Nich. Value false = Karmpus takes you away.
-The App then provides Lists of good and bad people, depending on the value of the good coloumn of the database.
-The App uses a MySQL database called santa_or_krampus at the localhost, port 3306
-The tomcat server for the MySQL production version of the app is listening on por t8081
-Testing is done on port 8082 with h2 database
-The project can be found in the github repository 
+The information stored is <br>
+<ol>
+  <li>name : a string , the name of the person</li>
+  <li>sweet: a string, their choice of sweets, candy or chocolates to receive on St Nicholas day</li>
+<li>good: either true or false, to signify if they are going to get the chocolate or a visit from the Krampus. Value good = chocolate from St Nich. Value false = Karmpus takes you away.</li>
+  </ol>
+The App then provides Lists of good and bad people, depending on the value of the good coloumn of the database.<br>
+The App uses a MySQL database called santa_or_krampus at the localhost, port 3306<br>
+The tomcat server for the MySQL production version of the app is listening on port 8081<br>
+Testing is done on port 8082 with h2 database<br>
+ 
 
 
 
