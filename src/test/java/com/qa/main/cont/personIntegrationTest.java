@@ -7,6 +7,9 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
+
+import java.util.ArrayList;
+
 import java.util.List;
 
 import org.junit.jupiter.api.Test;
@@ -23,6 +26,10 @@ import org.springframework.test.context.jdbc.Sql.ExecutionPhase;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.qa.main.domain.Person;
+
+import com.qa.main.rest.PersonController;
+import com.qa.main.service.PersonService;
+
 
 @SpringBootTest // boots the entire context
 @AutoConfigureMockMvc // creates the MockMVC object for sending our test requests
@@ -110,4 +117,28 @@ public class personIntegrationTest {
 		this.mvc.perform(request).andExpect(checkStatus);
 				
 	}
-}
+
+	
+	@Test
+	void testGetGood() throws Exception{
+		RequestBuilder request = get("/Person/getGood");
+		ResultMatcher checkStatus = status().isOk();
+		Person person = new Person(1, "Frad", "lollipops", true);
+		List<Person> people = List.of(person);
+		String responseBody = this.mapper.writeValueAsString(people);
+		ResultMatcher checkBody = content().json(responseBody);
+		this.mvc.perform(request).andExpect(checkStatus).andExpect(checkBody);
+		
+	}
+	@Test
+	void testGetBad() throws Exception{
+		
+		RequestBuilder request = get("/Person/getBad");
+		ResultMatcher checkStatus = status().isOk();
+		List<Person> people = new ArrayList<>();
+		String responseBody = this.mapper.writeValueAsString(people);
+		ResultMatcher checkBody = content().json(responseBody);
+		this.mvc.perform(request).andExpect(checkStatus).andExpect(checkBody);
+		
+	}
+
