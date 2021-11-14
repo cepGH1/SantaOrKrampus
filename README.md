@@ -86,6 +86,7 @@ Merged dev to main<br>
 ![image](https://user-images.githubusercontent.com/12085003/141470893-8c9d1a71-aff5-4338-935d-be420c026903.png)<br>
 <h4>Database Structure</h4>
 santa_or_krampus database showing contents of the person table after some additions and removals<br>
+<img src="https://user-images.githubusercontent.com/12085003/141471027-f20f4f3b-9ff4-4df4-b8f6-7873fe2e850f.png" height="400" alt="missing image">
 ![image](https://user-images.githubusercontent.com/12085003/141471027-f20f4f3b-9ff4-4df4-b8f6-7873fe2e850f.png)<br>
 <h4>Testing</h4>
 The app was tested with a mock mvc integration test and a junit suite of tests<br>
