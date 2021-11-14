@@ -66,10 +66,11 @@ Postman head, Get localhost:8081/Person/getGood<br>
 Retrieves all the people with bad behaviour, from the database, for Krampus<br>
 Postman head, Get localhost:8081/Person/getBad<br>
 <img src="https://user-images.githubusercontent.com/12085003/141469407-3cdff715-0956-40c8-9eb4-419ee6c9ff77.png" height="400" alt="missing image">
-![image](https://user-images.githubusercontent.com/12085003/141469407-3cdff715-0956-40c8-9eb4-419ee6c9ff77.png)<br>
+
 <h5>6. replace</h5>
 Replaces an entry in the database with new values whilst retaining it’s original id<br>
 Postman head Put localhost:8081/Person/replace/id<br>
+<img src="https://user-images.githubusercontent.com/12085003/141469560-8cb7066a-27c5-4f9f-9c00-a9f2474b9855.png" height="400" alt="missing image">
 ![image](https://user-images.githubusercontent.com/12085003/141469560-8cb7066a-27c5-4f9f-9c00-a9f2474b9855.png)<br>
 <h5>7. remove/id</h5>
 Removes the entry with the given id from the database<br>
