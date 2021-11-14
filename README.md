@@ -43,7 +43,7 @@ Put the three pieces of information in the body, as raw JSON notation<br>
 “sweet”:”chocolate”<br>
 “good”: true<br>
 }<br>
-<img src"https://user-images.githubusercontent.com/12085003/141466773-3d72f35b-fe27-4ddd-9f83-c0ec717061ae.png" height="400">
+<img src="https://user-images.githubusercontent.com/12085003/141466773-3d72f35b-fe27-4ddd-9f83-c0ec717061ae.png" height="400">
 ![image](https://user-images.githubusercontent.com/12085003/141466773-3d72f35b-fe27-4ddd-9f83-c0ec717061ae.png)<br>
 <h5>2. get/id</h5>
 Retrieves the database entry for the person with that id<br>
