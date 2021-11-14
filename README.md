@@ -6,8 +6,9 @@ Outline of the project</br>
 This repository is the result of a Department for Education Bootcamp run by QA.com in software development</br>
 Reason for doing this - learning to carry out a small project in Java</br>
 Project was managed agilely, using Jira, Scrum and Kanban boards</br>
-link to jira project management: 
+<h4>link to jira project management:</h4> 
 https://team-1632237778310.atlassian.net/jira/software/projects/DFES/boards/3/backlog </br>
+<h4>Classes and Interfaces - Entity Relationships</h4>
 <img src="EntityRelationships.jpg" height="400" >
 <h3>Thoughts about the Project</h3>
 I had no expectations about how the project would go. Although I wasn't unhappy with the time allocated. 
